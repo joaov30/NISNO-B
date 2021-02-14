@@ -1,0 +1,119 @@
+
+
+<ion-menu side="start" content-id="main-content">
+  <ion-header>
+
+    <ion-toolbar id="icon_toolbar" color="medium">
+
+      <ion-title>
+
+        <img alt="logo" id="header_icon"  src="assets/imagens/avatar.png">
+
+      </ion-title>
+
+    </ion-toolbar>
+
+  </ion-header>
+
+  <ion-content>
+
+    <ion-list>
+
+      <ion-item>
+
+        <ion-icon name="car" slot="start"></ion-icon>
+        <ion-label><ion-button color="primary" [routerLink]="['/home']" > <h2> Home </h2> </ion-button></ion-label>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-icon name="car" slot="start"></ion-icon>
+        <ion-label><ion-button color="primary" [routerLink]="['/perfil']" > <h2> Perfil </h2> </ion-button></ion-label>
+
+      </ion-item>
+      <ion-item>
+
+        <ion-icon name="paper-plane" slot="start"></ion-icon>
+        <ion-label><ion-button color = "primary"> <h2>Serviços</h2> </ion-button></ion-label>
+
+      </ion-item>
+      <ion-item>
+
+        <ion-icon name="build" slot="start"></ion-icon>
+        <ion-label><ion-button color = "primary"> <h2> Histórico </h2></ion-button></ion-label>
+
+      </ion-item>
+      <ion-item>
+
+        <ion-icon name="bookmarks" slot="start"></ion-icon>
+        <ion-label><ion-button color = "primary" [routerLink]="['/sobre-nos']" > <h2> Sobre nós </h2></ion-button></ion-label>
+
+      </ion-item>
+      <ion-item>
+
+        <ion-icon name="exit" slot="start"></ion-icon>
+        <ion-label><ion-button color = "primary"> <h2> Sair </h2></ion-button></ion-label>
+
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+
+    <ion-toolbar color="medium">
+      <ion-buttons slot="start">
+
+        <ion-menu-button></ion-menu-button>
+
+      </ion-buttons>
+      <ion-title>
+
+         <img alt="logo" id="header_logo" height="60" float-left src="assets/imagens/nisno-logo.png">
+
+        </ion-title>
+    </ion-toolbar>
+    
+
+<!--Content Card nisno-->
+    <ion-card>
+      <ion-card-header>
+        <img src="assets/imagens/nisno-logo.png" alt="">
+        <ion-card-subtitle>𝙉𝙞𝙨𝙣𝙤 𝙈𝙤𝙗𝙞𝙡𝙚</ion-card-subtitle>
+        <ion-card-title>Objetivo:</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Nosso aplicativo tem como ponto principal auxiliar a mão de obra do mecânico automotivo com a necessidade do cliente fazendo com que a comunicação entre ambos seja mais eficiente.
+      </ion-card-content>
+
+
+
+
+    </ion-card>
+
+    <ion-card>
+       <ion-card-title>Justificativa:</ion-card-title>
+
+      <ion-card-content>
+        A ideia do aplicativo surgiu quando um dos componentes do nosso grupo, teve uma intercorrência durante sua viagem. O mesmo se encontrava num lugar onde não havia a presença de conexões móveis, ele se encontrou num momento onde teve que ir no estabelecimento mais próximo e assim ter a facilidade de acionar um reboque e procurar uma oficina mecânica mais próxima pela área onde se encontrava
+        Nosso aplicativo para Smartphones visa como foco principal, sanar as dores do público voltado para as pessoas que são motoristas e mecânicos automotivos, sejam elas de aplicativos ou um motorista comum.
+          Através de pesquisas feitas sobre o dia a dia dos motoristas (sejam eles de aplicativos, o motorista comum ou até mesmo o piloto de moto que também trabalhe pelo mesmo meio), podemos notar uma explícita deficiência na acessibilidade quando se trata de uma intercorrência mecânica ou de um acidente de trânsito durante o uso de seus respectivos meios de condução. Como forma de reduzir essa dificuldade, o Projeto Nisno veio com a intenção de captar esse público que eventualmente sofrerá de algum dano material em seu veículo (carro ou moto) e a Nisno o encaminhará para o ponto de reparo mais próximo de sua intercorrência, sendo assim o modo mais viável de sanar os problemas desse público.
+      </ion-card-content>
+    </ion-card>
+
+<!--Content Card nisno-->
+
+  </ion-header>
+
+
+
+
+
+</div>
+
+
