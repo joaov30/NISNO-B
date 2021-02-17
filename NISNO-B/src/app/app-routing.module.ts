@@ -20,12 +20,12 @@ const routes: Routes = [
   loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
   },
   {
-    path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+    path: 'cadastrarusuario',
+    loadChildren: () => import('./cadastrarusuario/cadastrarusuario.module').then( m => m.CadastrarusuarioPageModule)
   },
   {
-    path: 'sobre-nos',
-    loadChildren: () => import('./sobre-nos/sobre-nos.module').then( m => m.SobreNosPageModule)
+    path: 'cadastrarprestador',
+    loadChildren: () => import('./cadastrarprestador/cadastrarprestador.module').then( m => m.CadastrarprestadorPageModule)
   },
   ];
 

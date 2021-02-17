@@ -33,13 +33,6 @@ ion-title{
 
 }
 
-#icon_toolbar{
-  border-style: solid;
-  border-color: black;
-  border-radius: 54px;
-
-}
-
 #header_icon{
   height: 100px;
   float: center;
@@ -51,15 +44,4 @@ ion-title{
 
 ion-button{
   font: 15px bold arial;
-
-}
-
-ion-button h2{
-  color: rgb(255, 255, 255);
-  font: italic;
-  text-shadow: -1px 0 black, 0 1px black
-}
-
-ion-button h2:hover{
-  color: red;
 }
