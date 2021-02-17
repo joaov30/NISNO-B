@@ -1,25 +1,19 @@
 <ion-content>
   <ion-header>
-    <ion-toolbar color="warning">
-      <ion-title class="ion-text-left">
-    <img alt="logo" id="header_logo" height="30" float-left src="assets/imagens/nisno-logo.png">Cadastro de Usuários
-  </ion-title>
-    </ion-toolbar>
+    <ion-toolbar color="primary">
+      <ion-title class="ion-text-center">Cadastro de Usuários</ion-title>
+    </ion-toolbar>
   </ion-header>
-
   <ion-content>
-    <ion-item>
-      <ion-label position="floating">E-mail</ion-label>
-      <ion-input type="email"  required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password"  required></ion-input>
-    </ion-item>
-
-    <ion-button class="ion-padding" 
-  color="primary" expand="full" >Cadastrar</ion-button>
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="email" [(ngModel)]="usuario.email" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="usuario.senha"required></ion-input>
+    </ion-item>
+    <ion-button class="ion-padding" color="primary" (click)="registrar(usuario)" expand="full">Cadastrar</ion-button>
+    <ion-button class="ion-padding" color="light" expand="full" [routerLink]="['/login']">Voltar</ion-button>
   </ion-content>
-  </ion-content>
-
+</ion-content>
