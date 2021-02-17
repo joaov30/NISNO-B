@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { Usuario } from "../models/usuario.model";
+import { Component, OnInit } from '@angular/core';
+import { Prestador } from '../models/prestador.model';
 
 import {
   ToastController,
@@ -8,24 +8,26 @@ import {
 } from "@ionic/angular";
 import { AngularFireAuth } from "@angular/fire/auth";
 
-@Component({
-  selector: "app-registrar",
-  templateUrl: "./registrar.page.html",
-  styleUrls: ["./registrar.page.scss"],
-})
-export class RegistrarPage implements OnInit {
-  usuario = {} as Usuario;
+import { AngularFirestore, AngularFirestoreCollection }
+  from '@angular/fire/firestore';
 
-  constructor(
-    private toastCtrl: ToastController,
+@Component({
+  selector: 'app-cadastrarprestador',
+  templateUrl: './cadastrarprestador.page.html',
+  styleUrls: ['./cadastrarprestador.page.scss'],
+})
+export class CadastrarprestadorPage implements OnInit {
+  prestador = {} as Prestador;
+  constructor(private toastCtrl: ToastController,
     private loadingCtrl: LoadingController,
     private afAuth: AngularFireAuth,
-    private navCtrl: NavController
-  ) { }
+    private navCtrl: NavController) { }
 
-  ngOnInit() { }
-  async registrar(usuario: Usuario) {
-    console.log(usuario);
+  ngOnInit() {
+  }
+
+  async cadastrar(prestador: Prestador) {
+    console.log(prestador);
     if (this.formValidation()) {
       // mostrar loader
       let loader = await this.loadingCtrl.create({
@@ -35,7 +37,7 @@ export class RegistrarPage implements OnInit {
       try {
         // entrar com usuário e senha
         await this.afAuth
-          .createUserWithEmailAndPassword(usuario.email, usuario.senha)
+          .createUserWithEmailAndPassword(prestador.email, prestador.senha)
           .then((data) => {
             console.log(data);
             // redirecionar para a página home
@@ -50,15 +52,31 @@ export class RegistrarPage implements OnInit {
     }
   }
 
+
   formValidation() {
-    if (!this.usuario.email) {
+    if (!this.prestador.email) {
       // mostrar toast message
       this.showToast("Digite seu e-mail");
       return false;
     }
-    if (!this.usuario.senha) {
+    if (!this.prestador.senha) {
       // mostrar toast message
       this.showToast("Digite sua Senha");
+      return false;
+    }
+    if (!this.prestador.nome) {
+      // mostrar toast message
+      this.showToast("Digite seu Nome");
+      return false;
+    }
+    if (!this.prestador.tel) {
+      // mostrar toast message
+      this.showToast("Digite seu Telefone");
+      return false;
+    }
+    if (!this.prestador.cpf) {
+      // mostrar toast message
+      this.showToast("Digite seu Cpf");
       return false;
     }
     return true;
@@ -71,4 +89,5 @@ export class RegistrarPage implements OnInit {
       })
       .then((toastData) => toastData.present());
   }
+
 }
