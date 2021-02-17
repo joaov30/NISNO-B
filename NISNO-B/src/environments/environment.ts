@@ -5,7 +5,16 @@
 export const environment = {
 
   
-  production: false
+  production: false,
+  firebase_config:{
+    apiKey: "AIzaSyBngqGy6H0Yl5uhqhZoSBNmXToZN6IWLts",
+    authDomain: "projetointregador-99167.firebaseapp.com",
+    projectId: "projetointregador-99167",
+    storageBucket: "projetointregador-99167.appspot.com",
+    messagingSenderId: "235611085425",
+    appId: "1:235611085425:web:f2cf2c833f6c2a602719d0",
+    measurementId: "G-01C2XYDH4C"
+  }
 };
 
 /*

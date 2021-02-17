@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Prestador de Serviço</h2>
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header lines="full">
+      <ion-label>
+        Preencha os campos.
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label position="stacked">Nome:</ion-label>
+      <ion-input placeholder="Nome Completo" type="text" [(ngModel)]="prestador.nome" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">E-mail</ion-label>
+      <ion-input placeholder="consulta@gmail.com.br" type="email" [(ngModel)]="prestador.email" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Senha:</ion-label>
+      <ion-input placeholder="Senha" type="password" [(ngModel)]="prestador.senha"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Telefone Celular:</ion-label>
+      <ion-input placeholder="(21)98855-2233" type="tel" maxlength="14"  pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}$" [(ngModel)]="prestador.tel"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header lines="full">
+      <ion-label>
+       Dados do Prestador
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label position="stacked">CPF:</ion-label>
+      <ion-input placeholder="999.999.999-11" type="number" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" [(ngModel)]="prestador.cpf" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">CNPJ/MEI</ion-label>
+      <ion-input placeholder="XX. XXX. XXX/0001-XX (Opcional)" type="number" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}/[0-1]{4}-[0-9]{2}." [(ngModel)]="prestador.cnpj" >  </ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!--  --> 
