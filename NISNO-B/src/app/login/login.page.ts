@@ -21,7 +21,7 @@ import { AngularFireAuth } from "@angular/fire/auth";
 export class LoginPage implements OnInit {
   usuario = {} as Usuario;
   verificar: any;
-  
+
 
   constructor(public alertController: AlertController,
     private toastCtrl: ToastController,
@@ -52,13 +52,13 @@ export class LoginPage implements OnInit {
   ionViewWillLeave() {
     this.verificar.unsubscribe();
   }
-  
+
   ionViewDidEnter() {
     this.verificar = this.platform.backButton.subscribe(() => {
       navigator["app"].exitApp();
     });
   }
-  
+
   async login(usuario: Usuario) {
     if (this.formValidation()) {
       let loader = await this.loadingCtrl.create({
@@ -79,8 +79,8 @@ export class LoginPage implements OnInit {
       loader.dismiss();
     }
   }
-  
-  
+
+
   formValidation() {
     if (!this.usuario.email) {
       this.showToast("Digite seu e-mail");
@@ -92,8 +92,8 @@ export class LoginPage implements OnInit {
     }
     return true;
   }
-  
-  
+
+
   showToast(mensagem: string) {
     this.toastCtrl
       .create({
