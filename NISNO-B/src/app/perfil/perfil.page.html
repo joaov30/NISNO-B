@@ -1,15 +1,32 @@
-<ion-menu side="start" content-id="main-content">
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+
+    <ion-toolbar color="medium">
+      <ion-buttons slot="start">
+
+        <ion-menu-button></ion-menu-button>
+
+      </ion-buttons>
+      <ion-title>
+
+         <img alt="logo" id="header_logo" height="60" float-left src="assets/imagens/nisno-logo.png">
+
+        </ion-title>
+    </ion-toolbar>
+
+
+
+  </ion-header>
+
+  <ion-menu side="start" content-id="main-content">
     <ion-header>
 
       <ion-toolbar color="medium">
 
         <ion-title>
 
-          <ion-avatar>
-
-            <img src="assets/imagens/pika.jpg">
-
-      </ion-avatar>
+          <img alt="logo" id="header_icon"  src="assets/imagens/avatar.png">
 
         </ion-title>
 
@@ -54,26 +71,41 @@
     </ion-content>
   </ion-menu>
 
+<ion-item>
+  <ion-label>Nome de Usuario : </ion-label>
+  <ion-input type="string"></ion-input>
+</ion-item>
 
-  <div class="ion-page" id="main-content">
-    <ion-header>
+<ion-item>
+  <ion-label floating>Email : </ion-label>
+  <ion-input type="email"></ion-input>
+</ion-item>
 
-      <ion-toolbar color="medium">
-        <ion-buttons slot="start">
+<ion-item>
+  <ion-label stacked>Telefone : </ion-label>
+  <ion-input type="tel"></ion-input>
+</ion-item>
 
-          <ion-menu-button></ion-menu-button>
+<ion-item>
+  <ion-label fixed>Site : </ion-label>
+  <ion-input type="url"></ion-input>
+</ion-item>
 
-        </ion-buttons>
-        <ion-title>
 
-           <img alt="logo" id="header_logo" height="60" float-left src="assets/imagens/nisno-logo.png">
 
-          </ion-title>
-      </ion-toolbar>
 
-    </ion-header>
+
+<ion-item>
+
+  <ion-button>Salvar</ion-button>
+
+</ion-item>
+
+<ion-item>
+
+  <ion-button>Cancelar</ion-button>
+
+</ion-item>
+
 
 </div>
-
-
-

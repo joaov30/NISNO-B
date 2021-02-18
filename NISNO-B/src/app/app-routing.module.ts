@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'cadastrarprestador',
     loadChildren: () => import('./cadastrarprestador/cadastrarprestador.module').then( m => m.CadastrarprestadorPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
   ];
 
 @NgModule({
